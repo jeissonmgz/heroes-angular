@@ -1,3 +1,25 @@
-<p>
-  heroes works!
-</p>
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+<mat-grid-list cols="3" rowHeight="600px">
+  <mat-grid-tile
+      [colspan]="1"
+      [rowspan]="1"
+      *ngFor = "let heroe of heroes"
+      >
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ heroe.nombre }}</mat-card-title>
+    <mat-card-subtitle>{{ heroe.casa }} - {{ heroe.aparicion }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="heroe.img" alt="Foto de Aquaman">
+  <mat-card-content>
+    <p>
+      {{ heroe.bio }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Ver más..</button>
+  </mat-card-actions>
+</mat-card>
+</mat-grid-tile>
+</mat-grid-list>
