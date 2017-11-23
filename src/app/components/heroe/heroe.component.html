@@ -1,0 +1,17 @@
+<h1>{{ heroe.nombre }} <small>{{ heroe.aparicion }}</small></h1>
+<hr>
+<mat-grid-list cols="3" rowHeight="800px">
+  <mat-card>
+    <img [src] = "heroe.img">
+    <br>
+    <a mat-button [routerLink]="['/heroes']">Regresar</a>
+  </mat-card>
+  <mat-card>
+    <h3>{{ heroe.nombre }}</h3>
+    <hr>
+    <p>
+      {{ heroe.bio }}
+    </p>
+    <img [src] = "'assets/img/' + heroe.casa + '.png'">
+  </mat-card>
+</mat-grid-list>
